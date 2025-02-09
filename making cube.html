@@ -1,0 +1,57 @@
+<html>
+    <style>
+.main{
+    width: 200px;
+    height: 200px;
+    animation: 6s z infinite;
+    transform-style: preserve-3d;
+}
+@keyframes z{
+    0%{
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    100%{
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+.spin{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+
+}
+.front{
+    background-color: red;
+    transform: translateZ(100px);
+}
+.back{
+    background-color: rgb(0, 255, 153);
+    transform: translateZ(100px) rotateY(180deg);
+}
+.left{
+    background-color: forestgreen;
+    transform: rotateX(-90deg) translateZ(100px);
+}
+.right{
+    background-color: forestgreen;
+    transform: rotateX(90deg) translateZ(100px);
+}
+.top{
+    background-color: rgb(0, 255, 251);
+    transform: rotateY(90deg) translateZ(100px);
+}
+.bottom{
+    background-color: rgb(5, 82, 81);
+    transform: rotateY(-90deg) translateZ(100px);
+}
+  
+  </style>
+  <div class="main ">
+  <div class="right spin"></div>
+  <div class="left spin"></div>
+  <div class="front spin"></div>
+  <div class="back spin"></div>
+  <div class="top spin"></div>
+  <div class="bottom spin"></div>
+</div>
+</html>
